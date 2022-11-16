@@ -1,0 +1,19 @@
+<h1>la liste des emplois</h1> <button type="button" class="btn btn-primary" (click)="Calculer()">Bilan</button>
+
+<div>
+    Chercher Emploi : 
+   
+    <input type="text" [(ngModel)]="entrepriseRechercher" (input)="recherche()" >
+    {{OffreRecherche}} <br>
+ 
+</div>
+<div *ngFor="let emp of listeEmploi; let j = index">
+        <hr>
+        reference : {{emp.reference}}
+        titre : {{emp.titre}}
+        entreprise : {{emp.entreprise}}
+        etat : {{emp.etat}}
+       <!--   <input type="submit" class="btn btn-warning" value="Postuler" [disabled]=" !j ? 'disabled': emp.etat == false" >-->
+   <input type="submit" class="btn btn-warning" value="Postuler" [disabled]="isDisabled(emp.etat)" >
+        <hr> 
+</div>
