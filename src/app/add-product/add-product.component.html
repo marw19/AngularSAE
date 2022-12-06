@@ -1,0 +1,24 @@
+<p>add-product works!</p>
+
+<form action="" #addForm="ngForm" (ngSubmit)="save(addForm)"> 
+    <div class="form-group">
+    <label for="title">title</label>
+    <input class="form-control"  type="text" name="title" id="title"  [(ngModel)]="product.title" required minlength="4" #title="ngModel">
+        <span style="color: red;" *ngIf="title.invalid && title.touched && title.errors?.['required']">Title is required</span>
+        <span style="color: red;" *ngIf="title.invalid && title.touched && title.errors?.['minlength']">Title is short</span>
+</div><br>
+
+        <div class="form-group">
+    <label for="price">price</label>
+    <input class="form-control"  type="number" name="price" id="price" [(ngModel)]="product.price"> </div><br>
+<div class="form-group">
+    <label for="quantity">quantity</label>
+    <input class="form-control" type="number" name="quantity" id="quantity"  [(ngModel)]="product.quantity"></div> <br>
+
+<div class="form-group">
+    <input class="form-control " type="submit" value="Add" class="btn btn-success">
+     </div>
+     
+    
+    
+</form>

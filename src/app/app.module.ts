@@ -10,6 +10,12 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 
 import { FormsModule } from '@angular/forms';
 import { ArticlesComponentComponent } from './articles-component/articles-component.component';
+import { ProductsComponent } from './products/products.component';
+import { HeaderComponent } from './header/header.component';
+import { NotfoundOageComponent } from './notfound-oage/notfound-oage.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 
 @NgModule({
@@ -18,6 +24,12 @@ import { ArticlesComponentComponent } from './articles-component/articles-compon
     OffresEmploiComponent,
     DataBindingComponent,
     ArticlesComponentComponent,
+    ProductsComponent,
+    HeaderComponent,
+    NotfoundOageComponent,
+    UpdateProductComponent,
+    AddProductComponent,
+    TemplateDrivenFormComponent,
     
   ],
   imports: [
