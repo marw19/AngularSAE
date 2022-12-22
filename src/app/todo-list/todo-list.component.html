@@ -1,0 +1,32 @@
+
+<h5>To-Do List</h5>
+
+<h4>Nombre de le nombre de todo completed dans listTodo : {{numberCalcul}}</h4>
+<button class="btn btn-primary" (click)="completedParRapportTotla()">Bilan</button>
+<span style="color: red;" *ngIf="msg != ''">{{msg}}</span>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">userId</th>
+        <th scope="col">id</th>
+        <th scope="col">title</th>
+        <th scope="col">completed</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let t of todolist">
+      <tr>
+        <th scope="row" >{{t.userId}}</th>
+        <td>{{t.id}}</td>
+        <td>{{t.title}}</td>
+        <td>{{t.completed}}</td>
+      
+        
+      </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  

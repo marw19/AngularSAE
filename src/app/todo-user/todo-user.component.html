@@ -1,0 +1,22 @@
+<p>todo-user works!</p>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">userId</th>
+        <th scope="col">id</th>
+        <th scope="col">title</th>
+        <th scope="col">completed</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let t of TodoList">
+      <tr>
+        <th scope="row" >{{t.userId}}</th>
+        <td>{{t.id}}</td>
+        <td>{{t.title}}</td>
+        <td>{{t.completed}}</td>
+      
+        
+      </tr>
+      
+    </tbody>
+  </table>

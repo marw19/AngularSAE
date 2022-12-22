@@ -1,0 +1,25 @@
+{
+  "product": [
+    {
+      "id": 6,
+      "title": "T-shirt 1",
+      "price": 18,
+      "quantity": 0,
+      "like": 0
+    },
+    {
+      "id": 7,
+      "title": "hellooooooo",
+      "price": 4002222,
+      "quantity": 13,
+      "like": 33
+    },
+    {
+      "id": 3,
+      "title": "koukiiiiii",
+      "price": 18,
+      "quantity": 0,
+      "like": 0
+    }
+  ]
+}

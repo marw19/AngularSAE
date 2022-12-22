@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ActivatedRouteSnapshot, ParamMap } from '@angular/router';
+import { NgForm } from '@angular/forms';
+import { ActivatedRoute, ActivatedRouteSnapshot, ParamMap, Router } from '@angular/router';
 import { map } from 'rxjs';
+import { Product } from '../model/Product';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-update-product',
@@ -9,7 +12,8 @@ import { map } from 'rxjs';
 })
 export class UpdateProductComponent implements OnInit {
   id !: number;
-  constructor(private recp:ActivatedRoute ) { }
+  product !: Product;
+  constructor(private recp:ActivatedRoute , private ps:ProductService  , private r : Router) { }
 
   ngOnInit(): void {
    // this.id = this.recp.snapshot.params['id'];
@@ -17,9 +21,19 @@ export class UpdateProductComponent implements OnInit {
     this.recp.paramMap.subscribe(
       params => this.id= Number(params.get('id'))  
       );
+      this.ps.getProductById(this.id).subscribe(
+        p => this.product = p
+      )
   }
 
+  
 
- 
+
+  updateProduct(f:NgForm){
+      this.ps.updateProduct(this.id,this.product).subscribe(
+        () => this.r.navigate(['products'])
+      );
+     
+  }
 
 }

@@ -16,6 +16,15 @@ import { NotfoundOageComponent } from './notfound-oage/notfound-oage.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TodoListComponent } from './todo-list/todo-list.component';
+import { UsersComponent } from './users/users.component';
+import { TodoUserComponent } from './todo-user/todo-user.component';
+import { ProductItemComponent } from './product-item/product-item.component';
+import { ConvertisseurComponentComponent } from './convertisseur-component/convertisseur-component.component';
+import { ToEuroConvertComponentComponent } from './to-euro-convert-component/to-euro-convert-component.component';
+import { ActorsComponentComponent } from './actors-component/actors-component.component';
+import { ActorComponentComponent } from './actor-component/actor-component.component';
 
 
 @NgModule({
@@ -30,14 +39,24 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
     UpdateProductComponent,
     AddProductComponent,
     TemplateDrivenFormComponent,
+    TodoListComponent,
+    UsersComponent,
+    TodoUserComponent,
+    ProductItemComponent,
+    ConvertisseurComponentComponent,
+    ToEuroConvertComponentComponent,
+    ActorsComponentComponent,
+    ActorComponentComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     TestModule,
-    FormsModule 
-  ],
+    FormsModule,
+    HttpClientModule
+    
+  ], 
   providers: [],
   bootstrap: [AppComponent]
 })
